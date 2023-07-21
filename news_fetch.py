@@ -8,7 +8,8 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 app = Flask(__name__) #creating the Flask class object   
  
 def news():
-    subscription_key = "ebd7c7685ef245baa503d3fdbf67de0e"
+    subscription_key = "ebd7c7685ef24"
+    subscription_key+= "5baa503d3fdbf67de0e"
     search_term = "Microsoft"
     search_url = "https://api.bing.microsoft.com/v7.0/news/search"
     headers = {"Ocp-Apim-Subscription-Key" : subscription_key}

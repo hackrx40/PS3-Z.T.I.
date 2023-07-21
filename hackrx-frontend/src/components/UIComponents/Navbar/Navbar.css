@@ -11,15 +11,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
-  height: 40px;
+  width: 100%;
+  height: 80px;
+  padding: 0 40px;
 }
 
 .nav__title,
 .nav__title > a {
   color: #7000ff;
   font-family: Quicksand;
-  font-size: 16px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -38,7 +39,7 @@
   list-style: none;
   color: #000;
   font-family: Quicksand;
-  font-size: 16px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

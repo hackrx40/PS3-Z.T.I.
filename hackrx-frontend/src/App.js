@@ -8,6 +8,7 @@ import Users from "./pages/Users";
 import UserStocks from "./pages/UserStocks";
 import News from "./pages/News";
 import Stock from "./components/UIComponents/Stock/Stock";
+import DummyStocks from "./Dummy/DummyStocks";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/stocks" element={<Stocks />} />
           <Route path="/stock" element={<Stock stockSymbol="ITCI" />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/mongo" element={<DummyStocks />} />
           <Route path="/user/:userId" element={<UserStocks />} />
           <Route path="/news" element={<News />} />
           <Route

@@ -16,7 +16,7 @@
   display: grid;
   align-items: center;
   justify-content: space-around;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto;
   grid-row: auto auto;
   grid-column-gap: 40px;
   grid-row-gap: 40px;
@@ -26,8 +26,36 @@
 .stocks__title {
   color: #fff;
   font-family: Quicksand;
-  font-size: 32px;
+  font-size: 64px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-bottom: 40px;
 }
+
+.stocks__search_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.stocks__search_container > button {
+  outline: none;
+  border: none;
+  line-height: 1.7;
+  background-color: #7000ff;
+  color: white;
+  padding: 10px;
+}
+
+.stocks__search_container > input {
+  outline: none;
+  border: none;
+  min-width: 450px;
+  line-height: 1.7;
+  padding: 10px;
+}
+
+/* .stocks__search_container > input:: { */

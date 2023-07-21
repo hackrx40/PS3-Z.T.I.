@@ -5,26 +5,14 @@ import nltk, re
 import pandas as pd
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import yfinance as yf
-import redis
+from pymongo import MongoClient
 
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
-redis_password = os.getenv("REDIS_PASS")
-
-# Connect to redis database
-
-r = redis.Redis(
-    host="redis-16565.c212.ap-south-1-1.ec2.cloud.redislabs.com",
-    port=16565,
-    password=redis_password,
-)
-
-r.set("foo", "bar")
-value = r.get("foo")
-print(value)
+# redis_password = os.getenv("REDIS_PASS")
 
 
 app = Flask(__name__)  # creating the Flask class object
@@ -60,6 +48,18 @@ async def getStocks():
     price = yf.Ticker(stockSymbol).info["currentPrice"]
 
     return str(price)
+
+
+@app.route("/api/send-stocks", methods=["POST"])
+def sendStocks():
+    stocks_obj = request.json
+    client = MongoClient(
+        "mongodb+srv://admin:adminpass@hackrx.nt7oey0.mongodb.net/?retryWrites=true&w=majority"
+    )
+    db = client["hackrx"]
+    collection = db["stocks"]
+    collection.insert_one(stocks_obj)
+    return "Data added to MongoDB"
 
 
 if __name__ == "__main__":

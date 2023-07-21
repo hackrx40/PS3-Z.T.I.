@@ -7,7 +7,7 @@ export default function Stock(props) {
     const [stockPrice, setStockPrice] = useState('');
     const getStockPrice = () => {
         axios.post('/api/stock', {
-            stockSymbol: props.stockSymbol
+            symbol: props.symbol
         })
             .then(response => {
                 setStockPrice(response.data);
@@ -22,10 +22,11 @@ export default function Stock(props) {
     return (
         <div className='stock__container'>
             <div className='stock__row1'>
-                <p className={`stock__name ${props.stockDown ? "red" : "green"}`}>{props.name}</p>
+                <p className={'stock__symbol'}>{props.symbol}</p>
                 <p className='stock__price'>₹{(stockPrice === null ? 'Nil' : stockPrice)}</p>
             </div>
             <div className='stock__row2'>
+                <p className='stock__name'>{props.name}</p>
                 <p className='stock__category'>{props.category}</p>
             </div>
         </div>

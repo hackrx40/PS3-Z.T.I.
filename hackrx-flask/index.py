@@ -56,7 +56,7 @@ def home():
 # Fetch realtime stock data
 @app.route("/api/stock", methods=["POST"])
 async def getStocks():
-    stockSymbol = request.json["stockSymbol"]
+    stockSymbol = request.json["symbol"]
     price = yf.Ticker(stockSymbol).info["currentPrice"]
 
     return str(price)

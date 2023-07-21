@@ -1,12 +1,12 @@
 .stock__container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   background: #7000ff;
   border-radius: 0.75rem;
   width: min-content;
-  height: 80px;
+  height: 150px;
   padding: 20px;
   transition: 0.3s;
   -webkit-user-select: none; /* Safari */
@@ -28,7 +28,7 @@
   align-items: center;
 }
 
-.stock__name {
+.stock__symbol {
   color: #00ff47;
   font-family: Quicksand;
   font-size: 16px;
@@ -57,6 +57,7 @@
 
 .stock__row2 {
   display: flex;
+  flex-direction: column;
   width: 100%;
   color: rgba(255, 255, 255, 0.8);
   font-family: Quicksand;
@@ -64,4 +65,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.stock__name {
+  font-weight: bold;
 }

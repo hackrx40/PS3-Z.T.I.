@@ -8,9 +8,10 @@ export default function Stocks() {
         <div className='stocks__wrapper'>
             <div className='stocks__container'>
                 <p className='stocks__title'>All Stocks</p>
+                <button></button>
                 <div className='stocks__grid'>
                     {DUMMY_STOCKS.map((stock) => {
-                        return <Stock key={stock.id} stockSymbol={stock.symbol} name={stock.symbol} category={stock.category} />
+                        return <Stock key={stock.id} symbol={stock.symbol} name={stock.name} category={stock.category} />
                     })}
                 </div>
             </div>

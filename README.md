@@ -21,9 +21,34 @@ The initial step is to gather information about the user, such as stock preferen
 
 ## Hierarchical clustering: 
 The pre-processed data is then subjected to hierarchical clustering using agglomerative and divisive approaches. This will group stocks that are comparable.​
+ 
+ ### User-User Based Collaborative Filtering
+ The main idea behind User-User Based Collaborative Filtering is to identify users who have similar preferences and tastes and use their historical interactions to predict how a target user might rate or interact with a specific item. The steps involved in this approach are as follows:
+ 
+ ## User-item interaction matrix: 
+ Instead of users and items representing general preferences, in this case, users would represent individual investors, and items would represent stocks. The matrix would store historical interactions of users with various stocks, such as purchase history, holding duration, or even sentiment data related to the stocks.
 
-## Individual rank assignment:
-Individual ranks are then awarded to the data depending on the outcomes of the collaborative and content-based filtering.​
+## Similarity computation: 
+The system calculates the similarity between investors based on their historical interactions with stocks. This could involve analyzing their trading patterns, common stock holdings, or any other relevant data to determine how closely their investment strategies align.
+
+
+## measures to improve effeciency of approach
+user_user_recs function will not only consider the closeness of users but also take into account the total stock interactions of users and stocks. Users with more stock interactions will be given higher priority in influencing recommendations for the target user, and stocks with the most total interactions will be recommended first. These enhancements aim to provide more consistent and relevant stock recommendations to users, leveraging the collective wisdom of users with higher market participation and suggesting stocks with proven popularity and interest among investors.
+
+### Content Based Recommendations
+Content-based recommendations based on a stock prediction model utilize the features and characteristics of individual stocks to make personalized recommendations to investors. Instead of relying solely on historical user-item interactions, this approach focuses on the intrinsic qualities of each stock and how well they match the preferences and risk profile of a particular investor.This is implemented by:
+
+## Implement NMF
+For NMF (non-negative matrix factorization), we need to obtain a design matrix. Here, we apply TfidfVectorizer to the combined text content. The transformation will return a matrix of size (documents x features). To reduce the size of the matrix and speed up computation, we set the maximum feature size to 5000, which will take the top 5000 best features that can contribute to our model.
+
+Our strategy to recommend a user n stocks can be summarized as:
+
+* Get a list of stock the user has already seen.
+* For each seen stock, find n most similar stocks.
+* Assemble all these stocks in a list and sort them in descending order by their similarity values.
+* Select the top n stocks from this list as the recommendations.
+
+
 
 ## Hybrid filtering: 
 The clustered data is then subjected to a hybrid filter that combines collaborative and content-based filtering. The filter combines item-based and user-based collaborative filtering for the part of collaborative filtering. The findings are then aggregated with random forest. The aggregated data is subsequently subjected to content-based screening. This filter leverages the user's stock search patterns to recommend equities that are similar to those they have previously searched for.​

@@ -56,13 +56,10 @@ def home():
 # Fetch realtime stock data
 @app.route("/api/stock", methods=["POST"])
 async def getStocks():
-    # stockSymbol = request.json["stockSymbol"]
-    # price = yf.download(stockSymbol)
-    # return price
-    symbol = request.json["stockSymbol"]
-    stock = yf.Ticker(symbol)
-    price = stock.info
-    return str(price["currentPrice"])
+    stockSymbol = request.json["stockSymbol"]
+    price = yf.Ticker(stockSymbol).info["currentPrice"]
+
+    return str(price)
 
 
 if __name__ == "__main__":

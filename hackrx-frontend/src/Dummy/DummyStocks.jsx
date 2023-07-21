@@ -23,303 +23,302 @@ export const randomStocks = () => {
 export const DUMMY_STOCKS = [
     {
         "id": "s_0001",
-        "name": "BRITANNIA",
+        "symbol": "BRITANNIA.NS",
         "category": "Consumer Food",
-        "price": 1361
+        "description": "Britannia Industries Limited"
     },
     {
         "id": "s_0002",
-        "name": "INFY",
+        "symbol": "INFY.NS",
         "category": "IT Services & Consulting",
-        "price": 8800
+        "description": "Infosys Limited"
     },
     {
         "id": "s_0003",
-        "name": "KOTAKBANK",
+        "symbol": "KOTAKBANK.NS",
         "category": "Bank - Private",
-        "price": 3417
+        "description": "Kotak Mahindra Bank Limited"
     },
     {
         "id": "s_0004",
-        "name": "DRREDDY",
+        "symbol": "DRREDDY.NS",
         "category": "Pharmaceuticals & Drugs",
-        "price": 4135
+        "description": "Dr. Reddy's Laboratories Limited"
     },
     {
         "id": "s_0005",
-        "name": "WIPRO",
+        "symbol": "WIPRO.NS",
         "category": "IT Services & Consulting",
-        "price": 2156
+        "description": "Wipro Limited"
     },
     {
         "id": "s_0006",
-        "name": "TATACONSUM",
+        "symbol": "TATACONSUM.NS",
         "category": "Tea/Coffee",
-        "price": 4053
+        "description": "Tata Consumer Products Limited"
     },
     {
         "id": "s_0007",
-        "name": "ITC",
+        "symbol": "ITC.NS",
         "category": "Diversified",
-        "price": 2222
+        "description": "ITC Limited"
     },
     {
         "id": "s_0008",
-        "name": "M&M",
+        "symbol": "M&M.NS",
         "category": "Automobile - Auto & Truck Manufacturers",
-        "price": 4285
+        "description": "Mahindra & Mahindra Limited"
     },
     {
         "id": "s_0009",
-        "name": "NESTLEIND",
+        "symbol": "NESTLEIND.NS",
         "category": "Consumer Food",
-        "price": 5665
+        "description": "Nestlé India Limited"
     },
     {
         "id": "s_0010",
-        "name": "TITAN",
+        "symbol": "TITAN.NS",
         "category": "Diamond & Jewellery",
-        "price": 7896
+        "description": "Titan Company Limited"
     },
     {
         "id": "s_0011",
-        "name": "BHARTIARTL",
-        "category": "Telecommunication",
-        "price": 6225
+        "symbol": "BHARTIARTL.NS",
+        "category": "Telecommunication - Service Provider",
+        "description": "Bharti Airtel Limited"
     },
     {
         "id": "s_0012",
-        "name": "TCS",
-        "category": "Services & Consulting",
-        "price": 3026
+        "symbol": "TCS.NS",
+        "category": "IT Services & Consulting",
+        "description": "Tata Consultancy Services Limited"
     },
     {
         "id": "s_0013",
-        "name": "APOLLOHOSP",
-        "category": "Healthcare",
-        "price": 400
+        "symbol": "APOLLOHOSP.NS",
+        "category": "Hospital & Healthcare Services",
+        "description": "Apollo Hospitals Enterprise Limited"
     },
     {
         "id": "s_0014",
-        "name": "BAJFINANCE",
+        "symbol": "BAJFINANCE.NS",
         "category": "NBFC",
-        "price": 4006
+        "description": "Bajaj Finance Limited"
     },
     {
         "id": "s_0015",
-        "name": "JSWSTEEL",
+        "symbol": "JSWSTEEL.NS",
         "category": "Iron & Steel",
-        "price": 2047
+        "description": "JSW Steel Limited"
     },
     {
         "id": "s_0016",
-        "name": "MARUTI",
-        "category": "Automobile",
-        "price": 8123
+        "symbol": "MARUTI.NS",
+        "category": "Automobile - Passenger Cars",
+        "description": "Maruti Suzuki India Limited"
     },
     {
         "id": "s_0017",
-        "name": "HINDUNILVR",
-        "category": "Household & Personal",
-        "price": 331
+        "symbol": "HINDUNILVR.NS",
+        "category": "Household & Personal Products",
+        "description": "Hindustan Unilever Limited"
     },
     {
         "id": "s_0018",
-        "name": "TECHM",
+        "symbol": "TECHM.NS",
         "category": "IT Services & Consulting",
-        "price": 2558
+        "description": "Tech Mahindra Limited"
     },
     {
         "id": "s_0019",
-        "name": "ADANIPORTS",
+        "symbol": "ADANIPORTS.NS",
         "category": "Transport Infrastructure",
-        "price": 4898,
-        "stockDown": true
+        "description": "Adani Ports and Special Economic Zone Limited"
     },
     {
         "id": "s_0020",
-        "name": "NTPC",
-        "category": "Power",
-        "price": 9073
+        "symbol": "NTPC.NS",
+        "category": "Power Generation/Distribution",
+        "description": "NTPC Limited"
     },
     {
         "id": "s_0021",
-        "name": "HINDALCO",
+        "symbol": "HINDALCO.NS",
         "category": "Iron & Steel",
-        "price": 5774
+        "description": "Hindalco Industries Limited"
     },
     {
         "id": "s_0022",
-        "name": "INDUSINDBK",
+        "symbol": "INDUSINDBK.NS",
         "category": "Bank - Private",
-        "price": 2398
+        "description": "IndusInd Bank Limited"
     },
     {
         "id": "s_0023",
-        "name": "HDFCLIFE",
+        "symbol": "HDFCLIFE.NS",
         "category": "Life & Health Insurance",
-        "price": 8154
+        "description": "HDFC Life Insurance Company Limited"
     },
     {
         "id": "s_0024",
-        "name": "TATASTEEL",
+        "symbol": "TATASTEEL.NS",
         "category": "Iron & Steel",
-        "price": 5915
+        "description": "Tata Steel Limited"
     },
     {
         "id": "s_0025",
-        "name": "BPCL",
+        "symbol": "BPCL.NS",
         "category": "Refineries",
-        "price": 6936
+        "description": "Bharat Petroleum Corporation Limited"
     },
     {
         "id": "s_0026",
-        "name": "GRASIM",
+        "symbol": "GRASIM.NS",
         "category": "Diversified",
-        "price": 6877
+        "description": "Grasim Industries Limited"
     },
     {
         "id": "s_0027",
-        "name": "HDFCBANK",
+        "symbol": "HDFCBANK.NS",
         "category": "Bank - Private",
-        "price": 2666
+        "description": "Housing Development Finance Corporation Limited"
     },
     {
         "id": "s_0028",
-        "name": "ONGC",
-        "category": "Oil",
-        "price": 7720
+        "symbol": "ONGC.NS",
+        "category": "Oil Exploration and Production",
+        "description": "Oil and Natural Gas Corporation Limited"
     },
     {
         "id": "s_0029",
-        "name": "SBIN",
+        "symbol": "SBIN.NS",
         "category": "Bank - Public",
-        "price": 5422
+        "description": "State Bank of India"
     },
     {
         "id": "s_0030",
-        "name": "HDFC",
+        "symbol": "HDFC.NS",
         "category": "Finance - Housing",
-        "price": 6034
+        "description": "Housing Development Finance Corporation Limited"
     },
     {
         "id": "s_0031",
-        "name": "EICHERMOT",
-        "category": "Automobile",
-        "price": 5820
+        "symbol": "EICHERMOT.NS",
+        "category": "Automobile - LCVS/ HVCS",
+        "description": "Eicher Motors Limited"
     },
     {
         "id": "s_0032",
-        "name": "ICICIBANK",
+        "symbol": "ICICIBANK.NS",
         "category": "Bank - Private",
-        "price": 6921
+        "description": "ICICI Bank Limited"
     },
     {
         "id": "s_0033",
-        "name": "AXISBANK",
+        "symbol": "AXISBANK.NS",
         "category": "Bank - Private",
-        "price": 8366
+        "description": "Axis Bank Limited"
     },
     {
         "id": "s_0034",
-        "name": "RELIANCE",
-        "category": "Oil",
-        "price": 1352
+        "symbol": "RELIANCE.NS",
+        "category": "Oil Exploration and Production",
+        "description": "Reliance Industries Limited"
     },
     {
         "id": "s_0035",
-        "name": "BAJAJ-AUTO",
-        "category": "Automobile Manufacturing",
-        "price": 919
+        "symbol": "UPL.NS",
+        "category": "Pesticides & Agrochemicals",
+        "description": "UPL Limited"
     },
     {
         "id": "s_0036",
-        "name": "UPL",
-        "category": "Pesticides & Agrochemicals",
-        "price": 5006
+        "symbol": "LT.NS",
+        "category": "Engineering & Construction",
+        "description": "Larsen & Toubro Limited"
     },
     {
         "id": "s_0037",
-        "name": "LT",
-        "category": "Engineering & Construction",
-        "price": 1242
+        "symbol": "CIPLA.NS",
+        "category": "Pharmaceuticals & Drugs",
+        "description": "Cipla Limited"
     },
     {
         "id": "s_0038",
-        "name": "CIPLA",
+        "symbol": "SUNPHARMA.NS",
         "category": "Pharmaceuticals & Drugs",
-        "price": 4609
+        "description": "Sun Pharmaceutical Industries Limited"
     },
     {
         "id": "s_0039",
-        "name": "SUNPHARMA",
-        "category": "Pharmaceuticals & Drugs",
-        "price": 5392
+        "symbol": "BAJAJFINSV.NS",
+        "category": "Finance - Investment",
+        "description": "Bajaj Finserv Limited"
     },
     {
         "id": "s_0040",
-        "name": "BAJAJFINSV",
-        "category": "Finance - Investment",
-        "price": 7925
+        "symbol": "HEROMOTOCO.NS",
+        "category": "Automobile - 2 & 3 Wheelers",
+        "description": "Hero MotoCorp Limited"
     },
     {
         "id": "s_0041",
-        "name": "HEROMOTOCO",
-        "category": "Automobile - 2 & 3 Wheelers",
-        "price": 8311
+        "symbol": "DIVISLAB.NS",
+        "category": "Pharmaceuticals & Drugs",
+        "description": "Divi's Laboratories Limited"
     },
     {
         "id": "s_0042",
-        "name": "DIVISLAB",
-        "category": "Pharmaceuticals & Drugs",
-        "price": 9200
+        "symbol": "POWERGRID.NS",
+        "category": "Power Generation/Distribution",
+        "description": "Power Grid Corporation of India Limited"
     },
     {
         "id": "s_0043",
-        "name": "POWERGRID",
-        "category": "Power Generation/Distribution",
-        "price": 7649
+        "symbol": "SBILIFE.NS",
+        "category": "Life & Health Insurance",
+        "description": "SBI Life Insurance Company Limited"
     },
     {
         "id": "s_0044",
-        "name": "SBILIFE",
-        "category": "Life & Health Insurance",
-        "price": 3652
+        "symbol": "ASIANPAINT.NS",
+        "category": "Paints",
+        "description": "Asian Paints Limited"
     },
     {
         "id": "s_0045",
-        "name": "ASIANPAINT",
-        "category": "Paints",
-        "price": 2919
+        "symbol": "ADANIENT.NS",
+        "category": "Trading",
+        "description": "Adani Enterprises Limited"
     },
     {
         "id": "s_0046",
-        "name": "ADANIENT",
-        "category": "Trading",
-        "price": 6917
+        "symbol": "TATAMOTORS.NS",
+        "category": "Automobile - LCVS/ HVCS",
+        "description": "Tata Motors Limited"
     },
     {
         "id": "s_0047",
-        "name": "TATAMOTORS",
-        "category": "Automobile - LCVS/ HVCS",
-        "price": 3818
+        "symbol": "ULTRACEMCO.NS",
+        "category": "Cement",
+        "description": "UltraTech Cement Limited"
     },
     {
         "id": "s_0048",
-        "name": "ULTRACEMCO",
-        "category": "Cement",
-        "price": 5253
+        "symbol": "HCLTECH.NS",
+        "category": "IT Services & Consulting",
+        "description": "HCL Technologies Limited"
     },
     {
         "id": "s_0049",
-        "name": "HCLTECH",
-        "category": "IT Services & Consulting",
-        "price": 6998
+        "symbol": "COALINDIA.NS",
+        "category": "Coal",
+        "description": "Coal India Limited"
     },
     {
         "id": "s_0050",
-        "name": "COALINDIA",
-        "category": "Coal",
-        "price": 276
+        "symbol": "BAJAJ-AUTO.NS",
+        "category": "Automobile - 2 & 3 Wheelers",
+        "description": "Bajaj Auto Limited"
     }
 ]

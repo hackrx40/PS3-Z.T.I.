@@ -1,0 +1,33 @@
+.users__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.users__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.users__grid {
+  display: grid;
+  align-items: center;
+  justify-content: space-around;
+  grid-template-columns: auto auto;
+  grid-row: auto auto;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  padding-bottom: 50px;
+}
+
+.users__title {
+  color: #fff;
+  font-family: Quicksand;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

@@ -1,0 +1,12 @@
+.user_stocks__heading {
+  color: #fff;
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.user_stocks__held_heading {
+  color: white;
+}

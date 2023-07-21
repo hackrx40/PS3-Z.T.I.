@@ -1,0 +1,49 @@
+.user__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #7000ff;
+  width: 300px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.user__container:hover {
+  transition: 0.3s;
+}
+
+.user__title {
+  color: #fff;
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.user__stocks {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Quicksand;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.user__details,
+.user__details > a {
+  color: #fff;
+  font-family: Quicksand;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.user__details > a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,17 @@
+.button {
+  outline: none;
+  border: none;
+  font-size: 18px;
+  line-height: 1.7;
+  border-radius: 15px;
+  color: rgb(27, 27, 41);
+  background: rgba(255, 255, 255, 0.905);
+  transition: 0.3s;
+  padding: 10px 30px;
+}
+
+.button:hover {
+  color: rgba(255, 255, 255, 0.621);
+  background: rgba(27, 27, 41, 0.8);
+  transition: 0.3s;
+}

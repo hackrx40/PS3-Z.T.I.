@@ -1,6 +1,5 @@
-from flask import Flask
+from flask import Flask, jsonify, request
 import requests
-from flask import request
 import json
 import nltk, re
 import pandas as pd
@@ -55,16 +54,15 @@ def home():
 
 
 # Fetch realtime stock data
-@app.route("/api/stocks")
-def getStocks():
-    stock = yf.Ticker("MSFT")
-
-    # get all stock info
-    stock.info
-
-    # get historical market data
-    # print(msft)
-    return stock.info
+@app.route("/api/stock", methods=["POST"])
+async def getStocks():
+    # stockSymbol = request.json["stockSymbol"]
+    # price = yf.download(stockSymbol)
+    # return price
+    symbol = request.json["stockSymbol"]
+    stock = yf.Ticker(symbol)
+    price = stock.info
+    return str(price["currentPrice"])
 
 
 if __name__ == "__main__":

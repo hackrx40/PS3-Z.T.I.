@@ -7,6 +7,7 @@ import Navbar from "./components/UIComponents/Navbar/Navbar";
 import Users from "./pages/Users";
 import UserStocks from "./pages/UserStocks";
 import News from "./pages/News";
+import Stock from "./components/UIComponents/Stock/Stock";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<h1>Home</h1>} />
           <Route path="/stocks" element={<Stocks />} />
+          <Route path="/stock" element={<Stock />} />
           <Route path="/users" element={<Users />} />
           <Route path="/user/:userId" element={<UserStocks />} />
           <Route path="/news" element={<News />} />

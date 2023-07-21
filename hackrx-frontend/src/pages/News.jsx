@@ -1,19 +1,6 @@
 import './News.css';
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios';
-
-function getNews(searchValue) {
-    axios.post('/api/news',
-        {
-            "search_term": searchValue
-        }
-    )
-        .then((response) => {
-            return response.data
-        }).catch((error) => {
-            console.log(error);
-        })
-}
 
 export default function News() {
     const [news, setNews] = useState(null);

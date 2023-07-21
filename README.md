@@ -1,6 +1,7 @@
 Problem Statement 3
 #Suggest me a stock
-###Overview of our solution​**
+
+# Overview of our solution​**
 
 Our system will recommend stocks to a user by using hierarchical clustering and hybrid filtering of similar data of multiple users.​
 

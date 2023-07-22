@@ -34,6 +34,16 @@ def news(search_term):
     return descriptions
 
 
+stock = "AAPL"
+data = yf.download(stock, start="2023-04-01", end="2023-07-01")
+
+
+@app.route("/api/graph")
+def index():
+    data_json = json.dumps(data.to_dict())
+    return data_json
+
+
 @app.route("/api/news", methods=["POST"])
 def home():
     search_term = request.json["search_term"]
@@ -41,7 +51,7 @@ def home():
     return news_list
 
 
-# Fetch realtime stock data
+# Fetch realtime stock price
 @app.route("/api/stock", methods=["POST"])
 async def getStocks():
     stockSymbol = request.json["symbol"]
@@ -50,17 +60,6 @@ async def getStocks():
     return str(price)
 
 
-@app.route("/api/send-stocks", methods=["POST"])
-def sendStocks():
-    stocks_obj = request.json
-    client = MongoClient(
-        "mongodb+srv://admin:adminpass@hackrx.nt7oey0.mongodb.net/?retryWrites=true&w=majority"
-    )
-    db = client["hackrx"]
-    collection = db["stocks"]
-    collection.insert_one(stocks_obj)
-    return "Data added to MongoDB"
-
-
+# Run the flask app
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

@@ -1,0 +1,33 @@
+.home__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  color: #fff;
+  font-family: Quicksand;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0 50px;
+}
+
+.home__team {
+  color: #fff;
+  font-family: Quicksand;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: lighter;
+  line-height: normal;
+}
+
+.home__ps {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.home__description {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: justify;
+}

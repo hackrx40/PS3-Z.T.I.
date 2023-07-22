@@ -1,11 +1,18 @@
 from flask import Flask, jsonify, request
-import requests
 import json
 import nltk, re
 import pandas as pd
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import yfinance as yf
 from pymongo import MongoClient
+from user_recs import main_app
+from gra import grap
+import requests
+from recc_w_fac import recc_fac
+from getstk import stck_held
+from flask import Flask, jsonify, request
+import json
+
 
 import os
 from dotenv import load_dotenv
@@ -34,16 +41,6 @@ def news(search_term):
     return descriptions
 
 
-stock = "AAPL"
-data = yf.download(stock, start="2023-04-01", end="2023-07-01")
-
-
-@app.route("/api/graph")
-def index():
-    data_json = json.dumps(data.to_dict())
-    return data_json
-
-
 @app.route("/api/news", methods=["POST"])
 def home():
     search_term = request.json["search_term"]
@@ -51,15 +48,54 @@ def home():
     return news_list
 
 
-# Fetch realtime stock price
+# Stock price
 @app.route("/api/stock", methods=["POST"])
 async def getStocks():
     stockSymbol = request.json["symbol"]
     price = yf.Ticker(stockSymbol).info["currentPrice"]
-
     return str(price)
 
 
-# Run the flask app
+# Live Graph
+@app.route("/api/graph", methods=["POST"])
+async def Stocks():
+    stockSymbol = request.json["symbol"]
+    result = await grap()
+    return result
+
+
+# Stocks Held
+@app.route("/api/held", methods=["POST"])
+async def client():
+    user = request.json["user"]
+    # print("Accessed stocks held function\n")
+    result = stck_held(user)
+    return result
+
+
+# Waitlist
+@app.route("/api/watchlist", methods=["POST"])
+async def wtlist():
+    user = request.json["user"]
+    stocks = stck_held(user)
+    result = recc_fac(stocks[3])
+    return result
+
+
+# Recommended
+@app.route("/api/recommended", methods=["POST"])
+async def recc():
+    user = request.json["user"]
+    return main_app(user)
+
+
+# Fetch realtime stock price
+@app.route("/api/price", methods=["POST"])
+async def price():
+    stockSymbol = request.json["symbol"]
+    price = str(yf.Ticker(stockSymbol).info["currentPrice"])
+    return price
+
+
 if __name__ == "__main__":
     app.run(debug=True)

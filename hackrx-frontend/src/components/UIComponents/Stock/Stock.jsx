@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './Stock.css'
 import axios from 'axios';
-import image from './graph.png'
-import { Line } from 'react-chartjs-2'
+// import image from './graph.png'
+
 
 
 export default function Stock(props) {
@@ -20,13 +20,6 @@ export default function Stock(props) {
 
     useEffect(() => {
         setStockPrice(getStockPrice());
-        // fetch("/api/graph")
-        //     .then((response) => response.json())
-        //     .then((data) => {
-        //         setGraphState({
-        //             data: data,
-        //         });
-        //     });
     }, [])
 
 
@@ -51,10 +44,11 @@ export default function Stock(props) {
             </div>
             <div className='stock__row2'>
                 <div>
-                    <p className='stock__name'>{props.name}</p>
-                    <p className='stock__category'>{props.category}</p>
+                    <p className='stock__name'>{props.name || ""}</p>
+                    <p className='stock__category'>{props.category || ""}</p>
                 </div>
-                <img src={image} alt='stock graph' />
+                {/* <img src={'../../../../../hackrx-flask/graphs/' + props.symbol} alt='stock graph' /> */}
+                <img src={`../../../../public/graphs/${props.symbol}.png`} alt=''></img>
                 {/* <Line data={data} /> */}
             </div>
         </div>
